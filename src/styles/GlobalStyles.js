@@ -1,12 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     body {
         margin: 0;
-        font-family: 'Roboto, sans-seriff';
-        background-color: #e0f7fa;
-        color: #333;        
+        padding: 0;
+        font-family: ${({ theme }) => theme.fonts.main};
+        background-color: ${({ theme }) => theme.colors.background};
+        color: ${({ theme }) => theme.colors.text};
     }
-`;
+            
+    `;
 
 export default GlobalStyles;
